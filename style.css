@@ -1,5 +1,6 @@
 body {
-  background: rgb(4, 68, 15);
+  background: rgb(0,0,0);
+/*  background: rgb(4, 68, 15);*/
 }
 
 h1{
@@ -13,7 +14,9 @@ h1{
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: white;
+/*  background-color: white;*/
+  background: center url("images/tunnel.png"); /* background added by Sosa */
+  background-size: cover;                      /* added by Sosa */
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -29,6 +32,8 @@ h1{
     font-size: 16px;
     display: block;
     text-align: center;
+    width: 50%; /* blue button shortened by Sosa */
+    margin: auto; /* added by Sosa */
 }
 
 .container a:hover {
