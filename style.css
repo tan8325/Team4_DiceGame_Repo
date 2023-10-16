@@ -1,5 +1,6 @@
 body {
-  background: rgb(4, 68, 15);
+  background: rgb(0,0,0);
+/*  background: rgb(4, 68, 15);*/
 }
 
 h1{
@@ -13,26 +14,37 @@ h1{
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: white;
+/*  background-color: white;*/
+  background: center url("images/tunnel.png"); /* background added by Sosa */
+  background-size: cover;                      /* added by Sosa */
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
-.container a{
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    display: block;
-    text-align: center;
+.reverse{
+  margin-top: 30px; /* Adjust the value as needed to create the desired space */
+  display: flex;
+  flex-direction: reverse; 
 }
 
-.container a:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+.white-box {
+  padding: 10px 20px;
+  background: linear-gradient(to right bottom, oldlace, #ddd);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  text-decoration: none; /* Remove the default underline on buttons */
+  width: 2%; /* blue button shortened by Sosa */
+  margin: auto; /* added by Sosa */
+}
+
+.white-box:hover {
+  background: gray; /* Darker blue on hover */
 }
 
 .dice1 {
@@ -53,51 +65,91 @@ h1{
 }
 
 
-/* On initial page load hide dice2, dice2 button, and dice3 button */
-#dice2, #dice2-link, #dice3-link {
+/* On initial page load hide #dice1-1,#dice1-2,#dice1-3,#dice1-4,#dice1-5,#dice1-6,#dice2,#lose1,#lose2,#lose3,#lose4,#lose5,#lose6 */
+#dice1-1,#dice1-2,#dice1-3,#dice1-4,#dice1-5,#dice1-6,#dice2,#lose1,#lose2,#lose3,#lose4,#lose5,#lose6{
   display: none;
 }
 
-/* When dice1 roll button is clicked hide dice1 roll button, show dice2 roll button, and do roll1 animation on dice1 */
-#dice1:target ~ #dice1-link {
-  display: none;
-}
-
-#dice1:target ~ #dice2-link {
+/* Choice1 is clicked show #dice1-1 and do roll animation and show lose msg */
+#dice1-1:target {
   display: block;
-}
-
-#dice1:target {
   animation: roll1 5s ease-in-out;
-  animation-fill-mode: forwards
-}
-
-/* When dice2 roll button is clicked hide dice1 roll button, hide dice1, show dice3 roll button, show dice2, do roll2 animation on dice2 */
-
-#dice1:target(+ #dice2:target){
-  display: none;
-}
-
-#dice2:target ~ #dice2-link {
-  display: none;
-}
-
-#dice2:target ~ #dice1-link {
-  display: none;
-}
-
-
-#dice2:target ~ #dice3-link, #dice2:target{
-  display: block;
-}
-
-#dice2:target{
-  animation: roll2 5s ease-in-out;
-  animation-delay: 0.3s;
   animation-fill-mode: forwards;
 }
 
+#dice1-1:target ~ #lose1 {
+  display: block;
+  animation: fadeIn 5s;
+}
 
+/* Choice2 is clicked show #dice1-2 and do roll animation and show lose msg */
+#dice1-2:target{
+  display: block;
+  animation: roll1 5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#dice1-2:target ~ #lose2 {
+  display: block;
+  animation: fadeIn 5s;
+}
+
+/* Choice3 is clicked show #dice1-3 and do roll animation and show lose msg */
+#dice1-3:target{
+  display: block;
+  animation: roll1 5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#dice1-3:target ~ #lose3 {
+  display: block;
+  animation: fadeIn 5s;
+}
+
+/* Choice4 is clicked show #dice1-4 and do roll animation and show win msg */
+#dice1-4:target{
+  display: block;
+  animation: roll1 5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#dice1-4:target ~ #lose4 {
+  display: block;
+  animation: fadeIn 5s;
+}
+
+/* Choice5 is clicked hide show #dice1-5 and do roll animation and show lose msg */
+#dice1-5:target{
+  display: block;
+  animation: roll1 5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#dice1-5:target ~ #lose5 {
+  display: block;
+  animation: fadeIn 5s;
+}
+
+/* Choice6 is clicked show #dice1-6 and do roll animation and show lose msg */
+#dice1-6:target{
+  display: block;
+  animation: roll1 5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#dice1-6:target ~ #lose6 {
+  display: block;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0%, 99%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes roll1 {
   0% { transform: rotateX(0deg) rotateY(0deg); }
   16.66% { transform: rotateX(0deg) rotateY(60deg); }
