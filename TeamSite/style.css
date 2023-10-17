@@ -1,0 +1,110 @@
+body
+{
+    background-image: url("images/background.jpg");
+    background-size: cover;
+}
+
+h1 
+{
+    text-align: center;
+    color: #8B0000; /* Burgundy color */
+    font-family: "Lato"; /* Change the font-family to your preference */
+    font-size: 36px; /* Adjust the font size as needed */
+    text-shadow: 2px 2px 4px #D2B48C; /* Larger, tan text shadow */
+    background: #D6EAF8; 
+    padding: 10px 20px; 
+    border: 5px solid #8B0000;
+}
+
+h2
+{
+    text-align: center;
+}
+
+#leader
+{
+    font-weight: bold;
+}
+
+.member /* team containers */
+{
+    width: 50%;
+    border: 10px dotted #1a3d00;
+    background-color: #f0ece0;
+    margin-bottom: 5px;
+}
+
+.member .member-img /* person icon */
+{
+    position: relative;
+    text-align: left;
+}
+
+#leader
+{
+    margin-bottom: 20px;
+}
+
+.member img
+{
+    width: 15%;
+    height: auto;
+}
+
+.member .responsibilities
+{
+    width: 100%; /* expanding responsibilities size */
+    height: 100%; /* expanding responsibilities size */
+    position: absolute;
+    transition: all 0s ease 0s;
+    top: 0;
+    left: 0;
+    padding: 50px;
+    opacity: 0; /* initial opacity */
+    font-size: 20px;
+    color: white;
+    line-height: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.member:hover .responsibilities
+{
+    opacity: 1;
+}
+
+.member .member-info
+{
+    padding: 20px;
+}
+
+.member .title
+{
+    font-size: 18px;
+    color: #8B0000;
+    transition: all 0.5s ease 0s;
+}
+
+.member .post
+{
+    display: block;
+    font-size: 14px;
+    color: #3b336a;
+}
+
+.right-div 
+{
+    position: fixed;
+    margin-top: 300px;
+    margin-right: 50px;
+    top: 0;
+    right: 0;
+    width: 30%; 
+    background-color: #f0ece0; 
+    border: 10px solid #1a3d00; 
+}
+
+.custom-text
+{
+    color: darkblue;
+    font-weight: bold;
+}
