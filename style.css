@@ -1,29 +1,34 @@
-body {
-  background: rgb(0,0,0);
-/*  background: rgb(4, 68, 15);*/
-}
-
-h1{
+h1 {
+  font-family: cursive, sans-serif;
   text-align: center;
   color: white;
-  font-size: 16px;
+  font-size: 36px; /* Adjust the font size to your preference */
+}
+
+h2 {
+  font-family: cursive, sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 25px; /* Adjust the font size to your preference */
 }
 
 .container {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
   padding: 20px;
-/*  background-color: white;*/
-  background: center url("images/tunnel.png"); /* background added by Sosa */
-  background-size: cover;                      /* added by Sosa */
+  background: center/cover url("images/tunnel.png"); /* Background positioning and size */
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+
 .reverse{
-  margin-top: 30px; /* Adjust the value as needed to create the desired space */
+  margin-top: 30px;
   display: flex;
   flex-direction: reverse; 
 }
@@ -38,13 +43,13 @@ h1{
   font-size: 16px;
   display: block;
   text-align: center;
-  text-decoration: none; /* Remove the default underline on buttons */
+  text-decoration: none;
   width: 2%; /* blue button shortened by Sosa */
   margin: auto; /* added by Sosa */
 }
 
 .white-box:hover {
-  background: gray; /* Darker blue on hover */
+  background: gray;
 }
 
 .dice1 {
