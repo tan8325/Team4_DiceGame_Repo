@@ -49,16 +49,31 @@ h2 {
   background: gray;
 }
 
-.dice1, .dice2 {
+
+.next-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.next-button:hover {
+  background-color: gray;
+}
+
+.dice1{
   position: relative;
   width: 200px;
   height: 200px;
   margin: 100px auto;
   transform-style: preserve-3d;
-}
-
-.dice2 {
-  transform: rotateX(180deg) rotateY(0deg);
 }
 
 
