@@ -1,22 +1,22 @@
-h1 {
+h1, h2 {
   font-family: cursive, sans-serif;
   text-align: center;
   color: white;
-  font-size: 36px; /* Adjust the font size to your preference */
+}
+
+h1 {
+  font-size: 36px;
 }
 
 h2 {
-  font-family: cursive, sans-serif;
-  text-align: center;
-  color: white;
-  font-size: 25px; /* Adjust the font size to your preference */
+  font-size: 25px;
 }
 
 .container {
   width: 100%;
   max-width: 600px;
   padding: 20px;
-  background: center/cover url("images/tunnel.png"); /* Background positioning and size */
+  background: center/cover url("images/tunnel.png");
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -26,33 +26,30 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
-
-.reverse{
+.reverse {
   margin-top: 30px;
   display: flex;
-  flex-direction: reverse; 
+  flex-direction: reverse;
 }
 
 .white-box {
   padding: 10px 20px;
   background: linear-gradient(to right bottom, oldlace, #ddd);
   color: rgb(0, 0, 0);
-  border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  display: block;
   text-align: center;
   text-decoration: none;
-  width: 2%; /* blue button shortened by Sosa */
-  margin: auto; /* added by Sosa */
+  margin: auto;
+  font-family: cursive, sans-serif;
+  font-size: 18px;
 }
 
 .white-box:hover {
   background: gray;
 }
 
-.dice1 {
+.dice1, .dice2 {
   position: relative;
   width: 200px;
   height: 200px;
@@ -61,12 +58,7 @@ h2 {
 }
 
 .dice2 {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 100px auto;
-  transform-style: preserve-3d;
-  transform: rotateX(180deg) rotateY(0deg); /* start on face4 */
+  transform: rotateX(180deg) rotateY(0deg);
 }
 
 
@@ -148,13 +140,10 @@ h2 {
 }
 
 @keyframes fadeIn {
-  0%, 99%{
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0%, 99%{ opacity: 0; }
+  100% { opacity: 1;}
 }
+
 @keyframes roll1 {
   0% { transform: rotateX(0deg) rotateY(0deg); }
   16.66% { transform: rotateX(0deg) rotateY(60deg); }
